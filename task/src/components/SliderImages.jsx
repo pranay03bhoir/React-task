@@ -12,6 +12,32 @@ const SliderImages = ({ data }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
@@ -20,7 +46,7 @@ const SliderImages = ({ data }) => {
           <Images
             key={data.id}
             {...data}
-            cssClasses={`flex justify-center ms-10 mt-10 size-72 rounded-lg w-[80%]`}
+            cssClasses={`flex justify-center mt-10 size-72 rounded-lg w-[80%]`}
           />
         ))}
       </Slider>

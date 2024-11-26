@@ -8,7 +8,7 @@ const Images = ({ image, name, cssClasses, id }) => {
         <img src={image} alt={`images`} className={`${cssClasses}`} />
         <p className={`text-2xl font-mono text-center mt-5`}>{name}</p>
         <button
-          className={`p-5 border-2 bg-green-400 text-white rounded-lg`}
+          className={`p-2  border-2 bg-green-400 text-white rounded-lg`}
           onClick={() => setCount(count + 1)}
           key={id}
         >
