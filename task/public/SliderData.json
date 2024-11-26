@@ -1,0 +1,51 @@
+[{
+  "id": 1,
+  "name": "biryani",
+  "image": "/images/biryani.jpg",
+  "category": "non-veg"
+}, {
+  "id": 2,
+  "name": "burger",
+  "image": "/images/burger.jpg",
+  "category": "non-veg"
+}, {
+  "id": 3,
+  "name": "butter chicken",
+  "image": "/images/butterChicken.jpg",
+  "category": "non-veg"
+}, {
+  "id": 4,
+  "name": "fish fry",
+  "image": "/images/fish.jpg",
+  "category": "non-veg"
+}, {
+  "id": 5,
+  "name": "dal",
+  "image": "/images/dal.jpg",
+  "category": "veg"
+}, {
+  "id": 6,
+  "name": "mutton",
+  "image": "/images/mutton.jpg",
+  "category": "non-veg"
+}, {
+  "id": 7,
+  "name": "palak paneer",
+  "image": "/images/palakPaneer.jpg",
+  "category": "veg"
+}, {
+  "id": 8,
+  "name": "pancake",
+  "image": "/images/pancake.jpg",
+  "category": "veg"
+}, {
+  "id": 9,
+  "name": "salad",
+  "image": "/images/salad.jpg",
+  "category": "veg"
+}, {
+  "id": 10,
+  "name": "fancy salad",
+  "image": "/images/salad2.jpg",
+  "category": "veg"
+}]
