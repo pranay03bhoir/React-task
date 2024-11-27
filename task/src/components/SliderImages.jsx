@@ -7,10 +7,6 @@ import Images from "./Images.jsx";
 const SliderImages = ({ data }) => {
   const slider = useRef(null);
 
-  if (slider.current) {
-    slider.current.slickGoTo(0);
-  }
-
   var settings = {
     dots: false,
     infinite: true,
