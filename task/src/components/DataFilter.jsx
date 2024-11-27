@@ -14,21 +14,21 @@ const DataFilter = ({ data }) => {
   return (
     <>
       <div>
-        <div className={`flex gap-12 justify-center mt-12`}>
+        <div className={`flex gap-12 justify-center mt-20`}>
           <button
-            className={`border-2 rounded-lg p-3 bg-red-700 text-white`}
+            className={`border-2 rounded-lg p-3 bg-red-500 text-white focus:bg-red-900 focus:border-black`}
             onClick={() => filter("non-veg")}
           >
             Non-veg
           </button>
           <button
-            className={`border-2 rounded-lg p-3 bg-green-700 text-white`}
+            className={`border-2 rounded-lg p-3 bg-green-500 text-white focus:bg-green-900 focus:border-black`}
             onClick={() => filter("veg")}
           >
             Veg
           </button>
           <button
-            className={`border-2 rounded-lg p-3 bg-amber-400 text-white`}
+            className={`border-2 rounded-lg p-3 bg-amber-400 text-white focus:bg-amber-800 focus:border-black`}
             onClick={() => setFood(data)}
           >
             Show-all

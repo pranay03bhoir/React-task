@@ -8,24 +8,24 @@ const SliderImages = ({ data }) => {
   const slider = useRef(null);
   var settings = {
     dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 7,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 5,
           slidesToScroll: 3,
-          infinite: true,
-          dots: true,
+          infinite: false,
+          dots: false,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 2,
           initialSlide: 2,
         },
@@ -33,7 +33,7 @@ const SliderImages = ({ data }) => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -41,29 +41,31 @@ const SliderImages = ({ data }) => {
   };
   return (
     <>
-      <Slider ref={slider} {...settings}>
-        {data.map((data) => (
-          <Images
-            key={data.id}
-            {...data}
-            cssClasses={`flex justify-center mt-10 size-72 rounded-lg w-[80%]`}
-          />
-        ))}
-      </Slider>
-      <div className={`flex gap-10 justify-center mt-5`}>
+      <div
+        className={` flex gap-5 justify-center lg:flex lg:gap-5 lg:justify-end mx-16 mt-5`}
+      >
         <button
-          className={`text-5xl`}
+          className={`text-lg border-2 rounded-full w-[35px] h-[35px] bg-[#e2e2e7]`}
           onClick={() => slider?.current?.slickPrev()}
         >
           <i className="fa-solid fa-arrow-left"></i>
         </button>
         <button
-          className={`text-5xl`}
+          className={`text-lg border-2 rounded-full w-[35px] h-[35px] bg-[#e2e2e7]`}
           onClick={() => slider?.current?.slickNext()}
         >
-          <i className="fa-solid fa-arrow-right"></i>
+          <i className="fa-solid fa-arrow-right "></i>
         </button>
       </div>
+      <Slider ref={slider} {...settings}>
+        {data.map((data) => (
+          <Images
+            key={data.id}
+            {...data}
+            cssClasses={`flex justify-center mt-5 size-24 rounded-lg object-cover`}
+          />
+        ))}
+      </Slider>
     </>
   );
 };
