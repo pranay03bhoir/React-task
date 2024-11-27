@@ -65,15 +65,19 @@ const SliderImages = ({ data }) => {
           <i className="fa-solid fa-arrow-right "></i>
         </button>
       </div>
-      <Slider ref={slider} {...settings}>
-        {data.map((data) => (
-          <Images
-            key={data.id}
-            {...data}
-            cssClasses={`flex justify-center mt-5 size-24 rounded-lg object-cover`}
-          />
-        ))}
-      </Slider>
+      <div
+        className={`shadow-xl h-[35vh] w-full md:ms-0 rounded-lg overflow-x-hidden`}
+      >
+        <Slider ref={slider} {...settings}>
+          {data.map((data) => (
+            <Images
+              key={data.id}
+              {...data}
+              cssClasses={`flex justify-center mt-5 size-24 rounded-lg object-cover`}
+            />
+          ))}
+        </Slider>
+      </div>
     </>
   );
 };
