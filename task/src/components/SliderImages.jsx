@@ -6,10 +6,11 @@ import Slider from "react-slick";
 import Images from "./Images.jsx";
 const SliderImages = ({ data }) => {
   const slider = useRef(null);
-
-  if (slider.current) {
-    slider.current.slickGoTo(0);
-  }
+  useEffect(() => {
+    if (slider.current) {
+      slider.current.slickGoTo(0);
+    }
+  }, [data]);
 
   var settings = {
     dots: false,
