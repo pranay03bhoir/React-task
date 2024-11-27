@@ -24,7 +24,6 @@ const SliderImages = ({ data }) => {
         settings: {
           slidesToShow: 5,
           slidesToScroll: 3,
-          infinite: false,
           dots: false,
         },
       },
@@ -33,8 +32,6 @@ const SliderImages = ({ data }) => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 2,
-
-          infinite: false,
         },
       },
       {
@@ -42,7 +39,6 @@ const SliderImages = ({ data }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: false,
         },
       },
     ],
