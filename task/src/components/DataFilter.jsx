@@ -1,8 +1,12 @@
 import Images from "./Images.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const DataFilter = ({ data }) => {
-  const [food, setFood] = useState(data);
+  const [food, setFood] = useState([]);
+
+  useEffect(() => {
+    setFood(data);
+  }, [data]);
   const filter = (itemData) => {
     let filteredData = data.filter((item) => item.category === itemData);
     setFood(filteredData);
