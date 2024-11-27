@@ -17,7 +17,6 @@ const SliderImages = ({ data }) => {
     speed: 300,
     slidesToShow: 7,
     slidesToScroll: 1,
-    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
