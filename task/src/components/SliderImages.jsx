@@ -8,7 +8,7 @@ const SliderImages = ({ data }) => {
   const slider = useRef(null);
   useEffect(() => {
     if (slider.current) {
-      slider.current.slickGoTo(0);
+      slider.current.slickGoTo(data.id === 1);
     }
   }, [data]);
 
