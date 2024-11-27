@@ -38,15 +38,20 @@ const SliderImages = ({ data }) => {
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
     ],
   };
   return (
     <>
+      <div className={`float-left text-2xl ms-2 lg:ms-20`}>
+        <p className={`font text-xl font-extrabold font-sans md:text-2xl`}>
+          What's on your mind?
+        </p>
+      </div>
       <div
-        className={` flex gap-5 justify-center lg:flex lg:gap-5 lg:justify-end mx-16 mt-5`}
+        className={` flex gap-5 justify-end relative left-12 lg:flex lg:gap-5 lg:me-28 mx-16 mt-5`}
       >
         <button
           className={`text-lg border-2 rounded-full w-[35px] h-[35px] bg-[#e2e2e7]`}
@@ -62,7 +67,7 @@ const SliderImages = ({ data }) => {
         </button>
       </div>
       <div
-        className={`shadow-xl h-[35vh] w-full md:ms-0 rounded-lg overflow-x-hidden`}
+        className={` h-[35vh] flex flex-col justify-center md:ms-0 rounded-lg overflow-x-hidden`}
       >
         <Slider ref={slider} {...settings}>
           {data.map((data) => (
@@ -73,6 +78,7 @@ const SliderImages = ({ data }) => {
             />
           ))}
         </Slider>
+        <hr className={`mt-6 border-[1.5px]`}></hr>
       </div>
     </>
   );

@@ -20,25 +20,25 @@ const DataFilter = ({ data }) => {
       <div>
         <div className={`flex gap-12 justify-center mt-20`}>
           <button
-            className={`border-2 rounded-lg h-[6vh] w-[15vh] font-light bg-red-500 text-white focus:bg-red-900 focus:border-black`}
+            className={`border-2 rounded-lg h-[6vh] w-[15vh] font-sans bg-red-500 text-white focus:bg-red-900 focus:border-black`}
             onClick={() => filter("non-veg")}
           >
             Non-veg
           </button>
           <button
-            className={`border-2 rounded-lg h-[6vh] w-[15vh] font-light bg-green-500 text-white focus:bg-green-900 focus:border-black`}
+            className={`border-2 rounded-lg h-[6vh] w-[15vh] font-sans bg-[#1ba672] text-white focus:bg-green-900 focus:border-black`}
             onClick={() => filter("veg")}
           >
             Veg
           </button>
           <button
-            className={`border-2 rounded-lg h-[6vh] w-[15vh] font-light bg-amber-400 text-white focus:bg-amber-800 focus:border-black`}
+            className={`border-2 rounded-lg h-[6vh] w-[15vh] font-sans bg-amber-400 text-white focus:bg-amber-800 focus:border-black`}
             onClick={() => setFood(data)}
           >
             Show-all
           </button>
         </div>
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-14`}>
+        <div className={`grid grid-cols-2 md:grid-cols-4 gap-14 mb-12`}>
           {food.map((data) => (
             <Images
               key={data.id}
