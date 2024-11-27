@@ -7,7 +7,7 @@ const Images = ({ image, name, cssClasses, id }) => {
     <>
       <div className={`w-full flex flex-col items-center `}>
         <img src={image} alt={`images`} className={`${cssClasses}`} />
-        <p className={`text-md md:text-2xl font-mono text-center mt-5`}>
+        <p className={`text-sm md:text-2xl font-mono text-center mt-5`}>
           {name}
         </p>
         <div className={`flex justify-center w-[100%]`}>
