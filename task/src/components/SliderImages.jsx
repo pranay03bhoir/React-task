@@ -13,7 +13,7 @@ const SliderImages = ({ data }) => {
 
   var settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 7,
     slidesToScroll: 1,
@@ -41,7 +41,6 @@ const SliderImages = ({ data }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-
           infinite: false,
         },
       },
