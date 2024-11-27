@@ -6,12 +6,18 @@ import Slider from "react-slick";
 import Images from "./Images.jsx";
 const SliderImages = ({ data }) => {
   const slider = useRef(null);
+  useEffect(() => {
+    if (slider.current) {
+      slider.current.slickGoTo(0);
+    }
+  }, [data]);
   var settings = {
     dots: false,
     infinite: false,
     speed: 300,
     slidesToShow: 7,
     slidesToScroll: 1,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
@@ -27,7 +33,8 @@ const SliderImages = ({ data }) => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 2,
-          initialSlide: 2,
+
+          infinite: false,
         },
       },
       {
@@ -35,6 +42,8 @@ const SliderImages = ({ data }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+
+          infinite: false,
         },
       },
     ],
