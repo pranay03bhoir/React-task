@@ -18,7 +18,7 @@ const DataFilter = ({ data }) => {
   return (
     <>
       <div>
-        <div className={`flex gap-12 justify-center mt-20`}>
+        <div className={`flex gap-12 justify-center mt-12`}>
           <button
             className={`border-2 rounded-lg h-[6vh] w-[15vh] font-sans bg-red-500 text-white focus:bg-red-900 focus:border-black`}
             onClick={() => filter("non-veg")}
